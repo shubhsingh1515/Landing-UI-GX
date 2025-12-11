@@ -243,13 +243,14 @@ useEffect(() => {
     };
   }, []);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setFormStatus('submitting');
-    setTimeout(() => {
-      setFormStatus('success');
-    }, 1500);
-  };
+const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setFormStatus('submitting');
+  setTimeout(() => {
+    setFormStatus('success');
+  }, 1500);
+};
+
   
 
   const features = [
