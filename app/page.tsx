@@ -1357,7 +1357,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
                    <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-300 ml-1">Message</label>
-                      <textarea rows="4" placeholder="Tell us about your project needs..." className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"></textarea>
+                      <textarea rows={4} placeholder="Tell us about your project needs..." className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"></textarea>
                    </div>
 
                    <button 
