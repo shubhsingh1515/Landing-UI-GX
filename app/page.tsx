@@ -65,7 +65,7 @@ import Link from "next/link";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null); 
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState('idle'); 
    const [gsapLoaded, setGsapLoaded] = useState(false);
 
@@ -1225,7 +1225,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 >
                   <span className={`text-lg font-medium transition-colors duration-300 ${
