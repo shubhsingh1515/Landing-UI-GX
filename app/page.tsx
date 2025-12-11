@@ -93,19 +93,26 @@ export default function Home() {
   const footerRef = useRef(null);
 
 
-    useEffect(() => {
-    const loadGsap = async () => {
-      if (window.gsap) {
-        setGsapLoaded(true);
-        return;
-      }
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js';
-      script.onload = () => setGsapLoaded(true);
-      document.body.appendChild(script);
-    };
-    loadGsap();
-  }, []);
+useEffect(() => {
+  const loadGsap = async () => {
+    if (typeof window === "undefined") return;
+
+    const w = window as any;
+
+    if (w.gsap) {
+      setGsapLoaded(true);
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
+    script.onload = () => setGsapLoaded(true);
+    document.body.appendChild(script);
+  };
+
+  loadGsap();
+}, []);
+
 
   // Trigger GSAP Animations for Services Section
   useEffect(() => {
