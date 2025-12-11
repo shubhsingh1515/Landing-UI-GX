@@ -60,13 +60,7 @@ import {
   Briefcase as Gov
 } from 'lucide-react';
 
-// --- MOCK LINK COMPONENT FOR PREVIEW ---
-// In your actual Next.js app, import Link from 'next/link';
-const Link = ({ href, children, className, ...props }) => (
-  <a href={href} className={className} {...props}>
-    {children}
-  </a>
-);
+import Link from "next/link";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
